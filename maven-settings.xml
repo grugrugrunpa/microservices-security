@@ -20,7 +20,7 @@
         <mirror>
             <id>central</id>
             <name>central</name>
-            <url>http://nexus3-rabreu-workshop.apps.mdwocp4.rhbr-lab.com/com.microservices.apigateway.security.repository/maven-group/</url>
+            <url>http://nexus3-cicd-devtools.172.17.179.113.nip.io/repository/maven-group/</url>
             <mirrorOf>*</mirrorOf>
         </mirror>
     </mirrors>
