@@ -6,11 +6,13 @@
     <servers>
         <server>
             <id>nexus-snapshots</id>
+            <url>http://nexus3-cicd-devtools.172.17.179.113.nip.io/repository/maven-snapshots/</url>
             <username>admin</username>
             <password>admin123</password>
         </server>
         <server>
             <id>nexus-releases</id>
+            <url>http://nexus3-cicd-devtools.172.17.179.113.nip.io/repository/maven-releases/</url>
             <username>admin</username>
             <password>admin123</password>
         </server>
