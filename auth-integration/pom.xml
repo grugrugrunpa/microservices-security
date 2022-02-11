@@ -30,33 +30,6 @@
     https://mvnrepository.com/artifact/org.keycloak/keycloak-spring-boot-starter/3.4.17.Final-redhat-00001
     -->
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.jboss.redhat-fuse</groupId>
-                <artifactId>fuse-springboot-bom</artifactId>
-                <version>${fuse.bom.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.keycloak</groupId>
-                <artifactId>keycloak-integration-parent</artifactId>
-                <version>${keycloak.bom.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.keycloak.bom</groupId>
-                <artifactId>keycloak-adapter-bom</artifactId>
-                <!-- use the same dependency version from auth-sso-common -->
-                <version>${keycloak.bom.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
     <dependencies>
         <dependency>
             <groupId>javax.inject</groupId>
@@ -124,36 +97,18 @@
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-http4-starter</artifactId>
         </dependency>
-        <!-- metrics -->
-        <dependency>
-            <groupId>io.micrometer</groupId>
-            <artifactId>micrometer-spring-legacy</artifactId>
-            <version>1.2.0</version>
-        </dependency>
-        <dependency>
-            <groupId>io.micrometer</groupId>
-            <artifactId>micrometer-registry-prometheus</artifactId>
-            <version>1.2.0</version>
-        </dependency>
         <!-- opentracing -->
-        <dependency>
-            <groupId>io.jaegertracing</groupId>
-            <artifactId>jaeger-core</artifactId>
-            <version>0.35.5</version>
-        </dependency>
-        <dependency>
-            <groupId>io.jaegertracing</groupId>
-            <artifactId>jaeger-client</artifactId>
-            <version>0.35.5</version>
-        </dependency>
         <dependency>
             <groupId>org.apache.camel</groupId>
             <artifactId>camel-opentracing-starter</artifactId>
         </dependency>
         <dependency>
-            <groupId>io.jaegertracing</groupId>
-            <artifactId>jaeger-tracerresolver</artifactId>
-            <version>0.35.5</version>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.opentracing.contrib</groupId>
+            <artifactId>opentracing-spring-jaeger-cloud-starter</artifactId>
         </dependency>
         <!-- testing -->
         <dependency>

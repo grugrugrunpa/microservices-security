@@ -15,24 +15,6 @@
         <main.basedir>${basedir}/../..</main.basedir>
     </properties>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.jboss.redhat-fuse</groupId>
-                <artifactId>fuse-springboot-bom</artifactId>
-                <version>${fuse.bom.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <dependencies>
         <!-- OAuth2 -->
@@ -51,6 +33,14 @@
             <artifactId>spring-security-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.opentracing.contrib</groupId>
+            <artifactId>opentracing-spring-jaeger-cloud-starter</artifactId>
+        </dependency>
         <!-- -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -62,28 +52,6 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
             <!--version>${springboot.version}</version-->
         </dependency>
-        <dependency>
-            <groupId>io.micrometer</groupId>
-            <artifactId>micrometer-registry-prometheus</artifactId>
-            <version>1.2.0</version>
-        </dependency>
-        <!-- opentracing dependencies -->
-        <dependency>
-            <groupId>io.jaegertracing</groupId>
-            <artifactId>jaeger-core</artifactId>
-            <version>0.35.5</version>
-        </dependency>
-        <dependency>
-            <groupId>io.jaegertracing</groupId>
-            <artifactId>jaeger-client</artifactId>
-            <version>0.35.5</version>
-        </dependency>
-        <dependency>
-            <groupId>io.opentracing.contrib</groupId>
-            <artifactId>opentracing-spring-cloud-starter</artifactId>
-            <version>0.3.2</version>
-        </dependency>
-        <!-- -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>

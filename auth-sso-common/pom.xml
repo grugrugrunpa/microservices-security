@@ -15,43 +15,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <distributionManagement>
-        <repository>
-            <id>nexus-releases</id>
-            <url>${nexusReleaseRepoUrl}</url>
-        </repository>
-        <snapshotRepository>
-            <id>nexus-snapshots</id>
-            <url>${nexusSnapshotRepoUrl}</url>
-        </snapshotRepository>
-    </distributionManagement>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.jboss.redhat-fuse</groupId>
-                <artifactId>fuse-springboot-bom</artifactId>
-                <version>${fuse.bom.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.keycloak</groupId>
-                <artifactId>keycloak-integration-parent</artifactId>
-                <version>${keycloak.bom.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.keycloak.bom</groupId>
-                <artifactId>keycloak-adapter-bom</artifactId>
-                <!-- use the same dependency version from auth-sso-common -->
-                <version>${keycloak.bom.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <dependencies>
         <dependency>
@@ -84,6 +48,14 @@
         <dependency>
             <groupId>javax.inject</groupId>
             <artifactId>javax.inject</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.opentracing.contrib</groupId>
+            <artifactId>opentracing-spring-jaeger-cloud-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>junit</groupId>

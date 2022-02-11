@@ -172,6 +172,73 @@
             <url>https://maven.repository.redhat.com/earlyaccess/all/</url>
         </pluginRepository>
     </pluginRepositories>
+    <dependencyManagement>
+    	<dependencies>
+            <dependency>
+                <groupId>org.jboss.redhat-fuse</groupId>
+                <artifactId>fuse-springboot-bom</artifactId>
+                <version>${fuse.bom.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.keycloak</groupId>
+                <artifactId>keycloak-integration-parent</artifactId>
+                <version>${keycloak.bom.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.keycloak.bom</groupId>
+                <artifactId>keycloak-adapter-bom</artifactId>
+                <!-- use the same dependency version from auth-sso-common -->
+                <version>${keycloak.bom.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+	    <dependency>
+                <groupId>org.springframework.security.oauth.boot</groupId>
+                <artifactId>spring-security-oauth2-autoconfigure</artifactId>
+                <version>2.6.3</version>
+            </dependency>
+	    <dependency>
+		<groupId>io.micrometer</groupId>
+		<artifactId>micrometer-registry-prometheus</artifactId>
+	        <version>1.8.2</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>io.opentracing.contrib</groupId>
+	        <artifactId>opentracing-spring-jaeger-cloud-starter</artifactId>
+	        <version>3.3.1</version>
+	    </dependency>
+	    <!--
+	    <dependency>
+	        <groupId>io.opentracing.contrib</groupId>
+	        <artifactId>opentracing-spring-cloud-starter</artifactId>
+	    </dependency>
+	    <dependency>
+	        <groupId>io.micrometer</groupId>
+	        <artifactId>micrometer-spring-legacy</artifactId>
+	    </dependency>
+	    <dependency>
+	        <groupId>io.micrometer</groupId>
+	        <artifactId>micrometer-registry-prometheus</artifactId>
+	    </dependency>
+	    <dependency>
+	        <groupId>io.jaegertracing</groupId>
+	        <artifactId>jaeger-core</artifactId>
+	    </dependency>
+	    <dependency>
+	        <groupId>io.jaegertracing</groupId>
+	        <artifactId>jaeger-client</artifactId>
+	    </dependency>
+	    <dependency>
+	        <groupId>io.jaegertracing</groupId>
+	        <artifactId>jaeger-tracerresolver</artifactId>
+	    </dependency>
+	    -->
+    	</dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>
