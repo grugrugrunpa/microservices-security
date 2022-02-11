@@ -17,7 +17,7 @@
     <description>auth integration api</description>
 
     <properties>
-        <springboot.version>1.5.17.RELEASE</springboot.version>
+        <!--springboot.version>1.5.17.RELEASE</springboot.version-->
         <main.basedir>${basedir}/../..</main.basedir>
     </properties>
 
@@ -169,7 +169,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <version>${springboot.version}</version>
+            <!--version>${springboot.version}</version-->
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -197,7 +197,7 @@
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-admin-client</artifactId>
-            <version>3.4.12.Final-redhat-2</version>
+            <!--version>3.4.12.Final-redhat-2</version-->
         </dependency>
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
@@ -238,7 +238,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${springboot.version}</version>
+                <!--version>${springboot.version}</version-->
                 <executions>
                     <execution>
                         <goals>

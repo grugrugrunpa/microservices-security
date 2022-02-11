@@ -12,8 +12,6 @@
     <artifactId>product-insecure</artifactId>
 
     <properties>
-        <spring-cloud.version>Greenwich.SR3</spring-cloud.version>
-        <springboot.version>2.1.8.RELEASE</springboot.version>
         <main.basedir>${basedir}/../..</main.basedir>
     </properties>
 
@@ -27,9 +25,9 @@
                 <scope>import</scope>
             </dependency>
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${springboot.version}</version>
+                <groupId>org.jboss.redhat-fuse</groupId>
+                <artifactId>fuse-springboot-bom</artifactId>
+                <version>${fuse.bom.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -40,12 +38,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <version>${springboot.version}</version>
+            <!--version>${springboot.version}</version-->
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
-            <version>${springboot.version}</version>
+            <!--version>${springboot.version}</version-->
         </dependency>
         <dependency>
             <groupId>io.micrometer</groupId>
@@ -72,7 +70,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <version>${springboot.version}</version>
+            <!--version>${springboot.version}</version-->
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
@@ -83,18 +81,18 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
-            <version>${springboot.version}</version>
+            <!--version>${springboot.version}</version-->
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
-            <version>${springboot.version}</version>
+            <!--version>${springboot.version}</version-->
             <scope>runtime</scope>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
-            <version>${springboot.version}</version>
+            <!--version>${springboot.version}</version-->
         </dependency>
         <dependency>
             <groupId>com.shekhargulati</groupId>
@@ -104,7 +102,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
-            <version>${springboot.version}</version>
+            <!--version>${springboot.version}</version-->
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -154,7 +152,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${springboot.version}</version>
+                <!--version>${springboot.version}</version-->
                 <executions>
                     <execution>
                         <goals>
