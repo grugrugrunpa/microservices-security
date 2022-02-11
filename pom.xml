@@ -32,7 +32,7 @@
     <properties>
         <java.version>1.8</java.version>
         <!--thorntail.version>2.7.3.Final-redhat-00001</thorntail.version-->
-        <spring.cloud.version>Greenwich.SR1</spring.cloud.version>
+        <spring.cloud.version>Greenwich.SR6</spring.cloud.version>
         <!--vertx.version>3.6.3.redhat-00009</vertx.version-->
         <!--
         <fuse.bom.version>7.3.0.fuse-730058-redhat-00001</fuse.bom.version>
@@ -52,7 +52,7 @@
         <springfox.swagger2.version>3.0.0</springfox.swagger2.version>
         <org.webjars.swagger-ui.version>4.5.0</org.webjars.swagger-ui.version>
         <org.webjars.locator.version>0.42</org.webjars.locator.version>
-        <jackson.dataformat.xml.version>2.13.1</jackson.dataformat.xml.version>
+        <jackson.dataformat.xml.version>2.9.9</jackson.dataformat.xml.version>
         <junit.jupiter.version>5.4.2</junit.jupiter.version>
         <junit.version>4.12</junit.version>
         <!--arquillian.cube.version>1.18.2</arquillian.cube.version-->
