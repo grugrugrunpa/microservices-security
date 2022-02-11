@@ -49,7 +49,7 @@
         <httpclient.version>4.5.13</httpclient.version>
         <postgresql.version>42.3.2</postgresql.version>
         <h2.version>2.1.210</h2.version>
-        <springfox.swagger2.version>3.0.0</springfox.swagger2.version>
+        <springfox.swagger2.version>2.10.5</springfox.swagger2.version>
         <org.webjars.swagger-ui.version>4.5.0</org.webjars.swagger-ui.version>
         <org.webjars.locator.version>0.42</org.webjars.locator.version>
         <jackson.dataformat.xml.version>2.9.9</jackson.dataformat.xml.version>
