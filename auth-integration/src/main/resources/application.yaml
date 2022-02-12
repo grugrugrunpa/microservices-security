@@ -15,7 +15,7 @@ api:
 
 logging:
   config: classpath:logback.xml
-  level: INFO
+  level.root: INFO
 
 # options from org.apache.camel.spring.boot.CamelConfigurationProperties can be configured here
 camel:
