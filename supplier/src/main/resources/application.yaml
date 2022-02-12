@@ -121,8 +121,8 @@ opentracing:
     const-sampler:
       decision: true
     http-sender:
-      url: http://jaeger-collector:14268/api/traces
+      url: http://jaeger-all-in-one.microservices.svc.cluster.local:14268/api/traces
 
 jaeger.tracer:
-  host: ${OPENSHIFT_JAEGER_HOST:jaeger-agent.microservices.svc}
+  host: ${OPENSHIFT_JAEGER_HOST:jaeger-all-in-one.microservices.svc.cluster.local}
   port: 6831
