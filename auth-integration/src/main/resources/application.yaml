@@ -6,6 +6,8 @@ spring:
     name: ${OPENSHIFT_APP_NAME:fuse-auth-integration-api}
   datasource:
     initialize: false
+  main:
+    allow-bean-definition-overriding: true
 
 api:
   title: ${OPENSHIFT_APP_NAME:fuse-auth-integration-api}
