@@ -68,7 +68,7 @@ security:
       # access-type: bear-only
       # (this is the API that will be registered on RHSSO)
       # ----------------------------------------------------------------------------------------------------
-      id: ${OPENSHIFT_SECURITY_OAUTH2_RESOURCE:product_api}
+      id: ${OPENSHIFT_SECURITY_OAUTH2_RESOURCE:5f661099}
       token-info-uri: ${rest.security.issuer-uri}/protocol/openid-connect/token/introspect
       user-info-uri: ${rest.security.issuer-uri}/protocol/openid-connect/userinfo
       jwt:

@@ -131,13 +131,13 @@ supplier:
 # -------------------------------------------------------
 keycloak-com.microservices.apigateway.security.service-account:
   realm: ${OPENSHIFT_SVCACC_SSO_REALM:3scale-api}
-  client-id: ${OPENSHIFT_SVCACC_SSO_CLIENT_ID:847d10c1}
-  secret: ${OPENSHIFT_SVCACC_SSO_CLIENT_SECRET:4519d24a04b3d9093aa9129aa7711d9d}
+  client-id: ${OPENSHIFT_SVCACC_SSO_CLIENT_ID:3c9725bc}
+  secret: ${OPENSHIFT_SVCACC_SSO_CLIENT_SECRET:293194a5e3398f4181d665dcc101f77c}
   # only password and client_credentials are supported
   # client_credentials don't need username and password and can't be used to authenticate on 3scale managed clients
   # if your client is not managed by 3scale you're good to go with client_credentials, otherwise, use a user account.
   grant-type: ${OPENSHIFT_SVCACC_SSO_GRANT_TYPE:password}
-  username: ${OPENSHIFT_SVCACC_SSO_USERNAME:8f314bfa_svcacc}
+  username: ${OPENSHIFT_SVCACC_SSO_USERNAME:ec9725bc_svcacc}
   password: ${OPENSHIFT_SVCACC_SSO_PASSWORD:12345}
   # if using self-signed certificate you must use HTTP and set required-ssl=none on keycloak realm
   # https://lists.jboss.org/pipermail/keycloak-user/2017-April/010386.html
@@ -167,10 +167,10 @@ keycloak:
   cors: true
   ssl-required: ${OPENSHIFT_KEYCLOAK_SSL_REQUIRED:external}
   realm: ${OPENSHIFT_KEYCLOAK_REALM:3scale-api}
-  resource: ${OPENSHIFT_KEYCLOAK_RESOURCE:8f314bfa}
+  resource: ${OPENSHIFT_KEYCLOAK_RESOURCE:dded7133}
   auth-server-url: ${OPENSHIFT_KEYCLOAK_AUTH_HOST:http://sso-rhsso.rizad.patio.acom.co.jp/auth}
   credentials:
-    secret: ${OPENSHIFT_KEYCLOAK_RESOURCE_SECRET:2d1beebcf1c9d00dd51be7a344abd87f}
+    secret: ${OPENSHIFT_KEYCLOAK_RESOURCE_SECRET:01c7b88f87d729d93211e539c4d9446d}
   use-resource-role-mappings: true
   security-constraints:
     - authRoles:
