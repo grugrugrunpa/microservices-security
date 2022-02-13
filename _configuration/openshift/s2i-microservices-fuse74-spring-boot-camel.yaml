@@ -129,7 +129,7 @@ objects:
           image: library/${APP_NAME}:latest
           livenessProbe:
             httpGet:
-              path: /health
+              path: /actuator/health
               port: 8081
             initialDelaySeconds: 180
           name: ${APP_NAME}
@@ -138,7 +138,7 @@ objects:
             name: jolokia
           readinessProbe:
             httpGet:
-              path: /health
+              path: /actuator/health
               port: 8081
             initialDelaySeconds: 10
           resources:
