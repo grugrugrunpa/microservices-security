@@ -4,9 +4,9 @@ metadata:
   name: auth-integration-api-config
 data:
   OPENSHIFT_APP_NAME: fuse-auth-integration-api
-  OPENSHIFT_HOST_NAME: auth-integration-api-microservices-security.rizad.patio.acom.co.jp
+  OPENSHIFT_HOST_NAME: auth-integration-api.microservices-security.svc.cluster.local
   OPENSHIFT_JAEGER_HOST: jaeger-all-in-one.microservices.svc.cluster.local
-  OPENSHIFT_METRICS_URL: "http://jaeger-all-in-one.microservices.svc:14268/api/traces"
+  OPENSHIFT_METRICS_URL: "http://jaeger-all-in-one.microservices.svc.cluster.local:14268/api/traces"
   OPENSHIFT_METRICS_HOST: "auth-integration-api-metrics.microservices-security.svc.cluster.local"
   OPENSHIFT_PRODUCT_HOST: "product-api.microservices-security.svc.cluster.local"
   OPENSHIFT_PRODUCT_CTX: /api/v1/product
@@ -14,7 +14,7 @@ data:
   OPENSHIFT_STOCK_HOST: "stock-api.microservices-security.svc.cluster.local"
   OPENSHIFT_STOCK_CTX: /api/v1
   OPENSHIFT_STOCK_STATUS_CTX: /actuator/health
-  OPENSHIFT_SUPPLIER_HOST: "supplier-api-production.rizad.patio.acom.co.jp"
+  OPENSHIFT_SUPPLIER_HOST: "supplier-api.microservices-security.svc.cluster.local"
   OPENSHIFT_SUPPLIER_CTX: /api/v1
   OPENSHIFT_SUPPLIER_STATUS_CTX: /actuator/health
   OPENSHIFT_SVCACC_SSO_REALM: 3scale-api
@@ -23,9 +23,9 @@ data:
   OPENSHIFT_SVCACC_SSO_GRANT_TYPE: password
   OPENSHIFT_SVCACC_SSO_USERNAME: 8f314bfa_svcacc
   OPENSHIFT_SVCACC_SSO_PASSWORD: "12345"
-  OPENSHIFT_SVCACC_SSO_AUTH_HOST: http://sso-rhsso.rizad.patio.acom.co.jp/auth
+  OPENSHIFT_SVCACC_SSO_AUTH_HOST: http://sso.rhsso.svc.cluster.local:8080/auth
   OPENSHIFT_KEYCLOAK_SSL_REQUIRED: external
   OPENSHIFT_KEYCLOAK_REALM: 3scale-api
   OPENSHIFT_KEYCLOAK_RESOURCE: 8f314bfa
   OPENSHIFT_KEYCLOAK_RESOURCE_SECRET: 2d1beebcf1c9d00dd51be7a344abd87f
-  OPENSHIFT_KEYCLOAK_AUTH_HOST: http://sso-rhsso.rizad.patio.acom.co.jp
+  OPENSHIFT_KEYCLOAK_AUTH_HOST: http://sso.rhsso.svc.cluster.local:8080
