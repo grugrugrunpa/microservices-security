@@ -17,6 +17,7 @@ import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -42,7 +43,8 @@ public class ProductController extends BaseController {
     @PreAuthorize("hasAnyAuthority('ROLE_PRODUCT_BASIC','ROLE_PRODUCT_ADMIN','ROLE_CHECK_PRODUCT_STATUS')")
     public Page<Product> getAll(
             @ApiParam("The size of the page to be returned") @RequestParam(required = false) Integer size,
-            @ApiParam("Zero-based page index") @RequestParam(required = false) Integer page) {
+            @ApiParam("Zero-based page index") @RequestParam(required = false) Integer page,
+	    @ApiParam("Zero-base page sort") @RequestParam(required = false) String sortBy) {
 
         if (size == null) {
             size = DEFAULT_PAGE_SIZE;
@@ -52,7 +54,7 @@ public class ProductController extends BaseController {
             page = 0;
         }
 
-        Pageable pageable = new PageRequest(page, size);
+        Pageable pageable = PageRequest.of(page, size, Sort.by(sortBy));
         Page<Product> products = productService.findAll(pageable);
 
         return products;

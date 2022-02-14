@@ -4,4 +4,4 @@ metadata:
   name: stock-api-config
 data:
   OPENSHIFT_APP_NAME: stock-api
-  OPENSHIFT_JAEGER_HOST: jaeger-agent.microservices.svc
+  OPENSHIFT_JAEGER_HOST: jaeger-all-in-one.microservices.svc.cluster.local

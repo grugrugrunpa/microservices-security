@@ -1,7 +1,7 @@
 apiVersion: template.openshift.io/v1
 kind: Template
 labels:
-  template: s2i-microservices-fuse74-spring-boot-camel
+  template: s2i-microservices-fuse7-spring-boot-camel
 metadata:
   annotations:
     description: Spring Boot and Camel QuickStart. This example demonstrates how you
@@ -13,8 +13,8 @@ metadata:
     openshift.io/provider-display-name: Red Hat, Inc.
     tags: microservices,java,springboot,fis,jboss-fuse
     version: "1.4"
-  name: s2i-microservices-fuse74-spring-boot-camel
-  selfLink: /apis/template.openshift.io/v1/namespaces/openshift/templates/s2i-microservices-fuse74-spring-boot-camel
+  name: s2i-microservices-fuse7-spring-boot-camel
+  selfLink: /apis/template.openshift.io/v1/namespaces/openshift/templates/s2i-microservices-fuse7-spring-boot-camel
 objects:
 # ---------------- imageStream
 - apiVersion: v1
@@ -72,7 +72,7 @@ objects:
         forcePull: true
         from:
           kind: ImageStreamTag
-          name: fuse7-java-openshift:${BUILDER_VERSION}
+          name: fuse-java-openshift-rhel8:${BUILDER_VERSION}
           namespace: ${IMAGE_STREAM_NAMESPACE}
         incremental: true
       type: Source
@@ -129,7 +129,7 @@ objects:
           image: library/${APP_NAME}:latest
           livenessProbe:
             httpGet:
-              path: /health
+              path: /actuator/health
               port: 8081
             initialDelaySeconds: 180
           name: ${APP_NAME}
@@ -138,7 +138,7 @@ objects:
             name: jolokia
           readinessProbe:
             httpGet:
-              path: /health
+              path: /actuator/health
               port: 8081
             initialDelaySeconds: 10
           resources:
@@ -231,25 +231,25 @@ parameters:
   displayName: Application Name
   name: APP_NAME
   required: true
-  value: s2i-fuse74-spring-boot-camel
+  value: s2i-fuse7-spring-boot-camel
 - description: The URL of the com.microservices.apigateway.security.repository with your application source code.
   displayName: Git Repository URL
   name: GIT_REPO
   required: true
-  value: https://github.com/fabric8-quickstarts/spring-boot-camel.git
+  value: http://rizaddoc01.patio.acom.co.jp/project-ace/api-gw-poc/spring-boot-camel.git
 - description: Set this to a branch name, tag or other ref of your com.microservices.apigateway.security.repository if you
     are not using the default branch.
   displayName: Git Reference
   name: GIT_REF
-  value: spring-boot-camel-1.0.0.fuse-740016-redhat-00002
+  value: spring-boot-camel-7.10.0.fuse-sb2-7_10_1-00007-redhat-00001
 - description: The version of the FIS S2I builder image to use.
   displayName: Builder version
   name: BUILDER_VERSION
-  value: "1.4"
+  value: "latest"
 - description: The application version.
   displayName: Application Version
   name: APP_VERSION
-  value: 1.0.0.fuse-740016-redhat-00002
+  value: 7.10.0.fuse-sb2-7_10_1-00007-redhat-00001
 - description: Arguments passed to mvn in the build.
   displayName: Maven Arguments
   name: MAVEN_ARGS

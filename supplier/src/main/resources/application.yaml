@@ -68,7 +68,7 @@ security:
       # access-type: bear-only
       # (this is the API that will be registered on RHSSO)
       # ----------------------------------------------------------------------------------------------------
-      id: ${OPENSHIFT_SECURITY_OAUTH2_RESOURCE:847d10c1}
+      id: ${OPENSHIFT_SECURITY_OAUTH2_RESOURCE:ec9725bc}
       token-info-uri: ${rest.security.issuer-uri}/protocol/openid-connect/token/introspect
       user-info-uri: ${rest.security.issuer-uri}/protocol/openid-connect/userinfo
       jwt:
@@ -121,8 +121,8 @@ opentracing:
     const-sampler:
       decision: true
     http-sender:
-      url: http://jaeger-collector:14268/api/traces
+      url: http://jaeger-all-in-one.microservices.svc.cluster.local:14268/api/traces
 
 jaeger.tracer:
-  host: ${OPENSHIFT_JAEGER_HOST:jaeger-agent.microservices.svc}
+  host: ${OPENSHIFT_JAEGER_HOST:jaeger-all-in-one.microservices.svc.cluster.local}
   port: 6831
