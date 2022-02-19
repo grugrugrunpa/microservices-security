@@ -5,7 +5,7 @@ import { Product } from './product.model';
 import { Subject } from 'rxjs';
 import { DataTableDirective } from 'angular-datatables';
 import { IconDefinition, faSync, faEraser, faPlusCircle, faTrash } from '@fortawesome/free-solid-svg-icons';
-import { BsModalService, BsModalRef } from 'ngx-bootstrap';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-product',
@@ -55,10 +55,10 @@ export class ProductComponent implements OnDestroy, OnInit, AfterViewInit {
         dtInstance.destroy();
 
         // Call the dtTrigger to rerender again
-        this.dtTrigger.next();
+        this.dtTrigger.next(null);
       });
     } else {
-      this.dtTrigger.next();
+      this.dtTrigger.next(null);
     }
   }
 

@@ -14,9 +14,9 @@ export class AppInitService {
         realm: window['_env'].realm,
         url: window['_env'].url,
         clientId: window['_env'].clientId,
-        credentials: {
+  /*      credentials: {
           secret: window['_env'].clientSecret
-        }
+        }*/
       },
       initOptions: {
         onLoad: 'login-required'

@@ -14,7 +14,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
-import { ChartsModule } from 'ng2-charts';
+import { NgChartsModule } from 'ng2-charts';
 import { DataTablesModule } from 'angular-datatables';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -25,7 +25,7 @@ import { JsonDatePipe } from './product/json-date.pipe';
 import { MaintenanceComponent } from './maintenance/maintenance.component';
 
 const pipes = [
-  JsonDatePipe
+  /*JsonDatePipe*/
 ];
 
 export function init(appInitService: AppInitService) {
@@ -54,7 +54,7 @@ export function init(appInitService: AppInitService) {
     ModalModule.forRoot(),
     CommonModule,
     BrowserAnimationsModule,
-    ChartsModule,
+    NgChartsModule,
     DataTablesModule,
     ToastrModule.forRoot({
       maxOpened: 2,
